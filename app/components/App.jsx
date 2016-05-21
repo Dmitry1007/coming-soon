@@ -1,3 +1,4 @@
+// require('bootstrap-loader')
 import uuid from 'node-uuid';
 import React from 'react';
 import Notes from './Notes.jsx'
@@ -12,14 +13,6 @@ export default class App extends React.Component {
         {
           id: uuid.v4(),
           task: 'Learn Webpack'
-        },
-        {
-          id: uuid.v4(),
-          task: 'Learn React'
-        },
-        {
-          id: uuid.v4(),
-          task: 'Do laundry'
         }
       ]
     };
