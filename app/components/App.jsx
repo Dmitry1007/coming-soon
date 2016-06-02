@@ -12,7 +12,7 @@ export default class App extends React.Component {
       notes: [
         {
           id: uuid.v4(),
-          task: 'Learn Webpack'
+          task: 'info@yourdomain.com'
         }
       ]
     };
@@ -22,7 +22,7 @@ export default class App extends React.Component {
     const notes = this.state.notes;
     return (
       <div>
-        <button className="add-note" onClick={this.addNote}>+</button>
+
         <Notes notes={notes}
           onEdit={this.editNote}
           onDelete={this.deleteNote}/>

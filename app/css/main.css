@@ -1,5 +1,5 @@
-body {
-  /* background: cornsilk; */
+/* body {
+  background: cornsilk;
   font-family: sans-serif;
 }
 
@@ -30,7 +30,6 @@ body {
 }
 
 .note .task {
-  /* force to use inline-block so that it gets minimum height */
   display: inline-block;
 }
 
@@ -50,3 +49,4 @@ body {
 .note:hover .delete-note {
   visibility: visible;
 }
+ */

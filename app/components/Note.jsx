@@ -35,7 +35,6 @@ export default class Note extends React.Component {
     return (
       <div onClick={this.edit}>
         <span className="task">{this.props.task}</span>
-        {onDelete ? this.renderDelete() : null }
       </div>
     );
   };

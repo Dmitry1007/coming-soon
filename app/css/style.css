@@ -5,7 +5,7 @@ Master Stylesheet
 	Template:	 Ino Soon- Responsive Coming Soon Template
 	Author:		 imransdesign.com
 	URL:		 http://imransdesign.com/
-	Version:	1.0
+	Version:	1.0	
 
 ---------------------------------------------------------------------------------*/
 
@@ -216,7 +216,7 @@ ul.contact-list li i {
 		-ms-transition: background-color .3s ease, border .3s ease, color .3s ease;
 		-o-transition: background-color .3s ease, border .3s ease, color .3s ease;
 		transition: background-color .3s ease, border .3s ease, color .3s ease;
-		position: relative;
+		position: relative; 
 		-webkit-border-radius: 2px;
 		-moz-border-radius: 2px;
 		border-radius: 2px;
@@ -277,7 +277,7 @@ ul.contact-list li i {
 		4.3// Form Placeholder
 	===================================== */
 	input::-webkit-input-placeholder,
-	textarea::-webkit-input-placeholder {
+	textarea::-webkit-input-placeholder { 
 	    color: #dfdfdf;
 	}
 	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
@@ -285,14 +285,14 @@ ul.contact-list li i {
 	    opacity:  1;
 	}
 	::-moz-placeholder { /* Mozilla Firefox 19+ */
-	    color: #dfdfdf;
+	    color: #dfdfdf; 
 	    opacity:  1;
 	}
 	:-ms-input-placeholder { /* Internet Explorer 10+ */
 	   color: #dfdfdf;
 	}
 
-	placeholder {
+	placeholder { 
 	   color: #dfdfdf;
 	}
 	input[placeholder] { text-overflow: ellipsis; }
