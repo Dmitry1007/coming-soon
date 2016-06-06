@@ -1,4 +1,3 @@
-// require('bootstrap-loader')
 import uuid from 'node-uuid';
 import React from 'react';
 import Notes from './Notes.jsx'
@@ -22,22 +21,11 @@ export default class App extends React.Component {
     const notes = this.state.notes;
     return (
       <div>
-
         <Notes notes={notes}
-          onEdit={this.editNote}
-          onDelete={this.deleteNote}/>
+          onEdit={this.editNote} />
       </div>
     );
   }
-
-  deleteNote = (id, e) => {
-    // Avoid bubbling to edit
-    e.stopPropagation();
-
-    this.setState({
-      notes: this.state.notes.filter(note => note.id !== id)
-    });
-  };
 
   editNote = (id, task) => {
     // Don't modify if trying to set an empty value
@@ -49,19 +37,9 @@ export default class App extends React.Component {
       if(note.id === id && task) {
         note.task = task;
       }
-
       return note;
     });
 
     this.setState({notes});
-  };
-
-  addNote = () => {
-    this.setState({
-      notes: this.state.notes.concat([{
-        id: uuid.v4(),
-        task: 'Define New task'
-      }])
-    });
   };
 }

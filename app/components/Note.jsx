@@ -30,17 +30,28 @@ export default class Note extends React.Component {
   };
 
   renderNote = () => {
-    const onDelete = this.props.onDelete;
-
     return (
-      <div onClick={this.edit}>
-        <span className="task">{this.props.task}</span>
-      </div>
+      <header>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
+              <div className="logo wow bounceInLeft" data-wow-delay="0.4s">
+                <a className="site-logo" href="index.html">Ino Soon</a>
+              </div>
+            </div>
+            <div className="col-sm-6">
+                <ul className="contact-list wow bounceInRight" data-wow-delay="0.4s">
+                  <li><i className="fa fa-phone"></i> 1 -234 -456 -7890</li>
+                  <li>
+                    <i className="fa fa-envelope"></i>
+                      <span onClick={this.edit} className="task">{this.props.task}</span>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </header>
     );
-  };
-
-  renderDelete = () => {
-    return <button className="delete-note" onClick={this.props.onDelete}>X</button>;
   };
 
   edit = () => {
