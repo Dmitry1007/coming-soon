@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default class Email extends React.Component {
+export default class Telephone extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       editing: false,
-      address: 'info@yourdomain.com'
+      telephone: '123-456-7890'
     };
   }
 
@@ -14,27 +14,27 @@ export default class Email extends React.Component {
     if(this.state.editing) {
       return this.renderEdit();
     }
-    return this.renderEmail();
+    return this.renderTelephone();
   }
 
   renderEdit = () => {
     return <input type="text"
       ref={
         element => element ?
-        element.selectionStart = this.state.address.length :
+        element.selectionStart = this.state.telephone.length :
         null
       }
       autoFocus={true}
-      defaultValue={this.state.address}
+      defaultValue={this.state.telephone}
       onBlur={this.finishEdit}
       onKeyPress={this.checkEnter} />;
   };
 
-  renderEmail = () => {
+  renderTelephone = () => {
     return (
       <div onClick={this.edit}>
-        <i className="fa fa-envelope"></i>
-        {this.state.address}
+        <i className="fa fa-phone"></i>
+        {this.state.telephone}
       </div>
     );
   };
@@ -59,7 +59,7 @@ export default class Email extends React.Component {
     } else {
       this.setState({
         editing: false,
-        address: value
+        telephone: value
       });
     }
   };
